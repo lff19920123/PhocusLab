@@ -1,0 +1,426 @@
+/* 注：本文件仅适用于pm、ui、web、data这四个页面，勿与其它页面的样式表混用 */
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	color:#666;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+}
+body{
+	font-size: 14px;
+	background-color: #f2f2f2;
+}
+
+/* 页脚 ------------------------------------------------------------------------------------------*/
+footer{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	color: #999;
+	background-color: #1B1B1E;
+	position: absolute;
+}
+
+/* 职业标识区 ------------------------------------------------------------------------------------*/
+div.profession{
+	width:100%;
+	height:270px;
+	background-color: #1B1B1B;
+	padding: 20px 150px 0;
+	position: relative; 
+}
+div.pro-container{
+	width:800px;
+	margin:0 auto;
+	margin-top:50px;
+	position: relative;
+}
+div.pro-container div.pro-wrapper{
+	width:100px;
+	height:180px;
+	background-color: #1B1B1B;
+	position: absolute;
+	top:0;
+	left:350px;
+}
+div.pro-container div.pro-mark{
+	z-index: 9;
+}
+div.pro-container div.pro-wrapper div{
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	margin:0 auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	-webkit-filter:grayscale(1);
+	-moz-transition:all 0.3s;
+	transition:all 0.3s;
+	cursor: pointer;
+}
+div.pro-container div.pro-mark div{
+	-webkit-filter:grayscale(0);
+}
+div.pro-container div.pro-wrapper div:hover{
+	-webkit-filter:grayscale(0);
+}
+div.pro-container div.pro-wrapper div a{
+	display: inline-block;
+	width:100%;
+	height:100%;
+}
+div.pro-container div.pro-wrapper h3{
+	text-align: center;
+	font-size: 16px;
+	color:#fff;
+	margin-top:20px;
+}
+
+/* 导航区 -------------------------------------------------------------------------------------------*/
+div.nav{
+	width:100%;
+	height:60px;
+	background-color: #2B322E;
+	position: relative;
+}
+ul.toggleNav{
+	display: block;
+	width:412px;
+	margin:0 auto;
+}
+ul.toggleNav li{
+	display: inline-block;
+	-moz-transition:all 0.3s;
+	transition:all 0.3s;
+	line-height: 60px;
+	padding:0 36px;
+	cursor:pointer;
+}
+div.indicator{
+	position: absolute;
+	bottom:0;
+	width:16px;
+	height:16px;
+	border:8px solid transparent;
+	border-bottom:8px solid #ffffff;
+}
+
+/* 内容区 --------------------------------------------------------------------------------------------*/
+div.toggleContentWrap{
+	width:1200px;	
+	margin:0 auto;
+	position: relative;
+}
+div.toggleContent{
+	position: absolute;
+	top:0;
+	width:100%;
+	background-color: #fff;
+}
+
+/* 书 */
+div.book-wrapper{
+	height:350px;
+	padding:30px;
+	width:600px;
+	float:left;
+	border-top:1px solid #eeeeee;
+	position: relative;
+}
+div.book-wrapper:nth-child(odd){
+	border-right:1px solid #eeeeee;
+}
+div.book-poster{
+	width:220px;
+	height:100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	position: relative;
+	-moz-transition:all .3s;
+	transition:all .3s;
+}
+div.book-poster:hover{
+	top:-5px;
+	box-shadow: 5px 5px 5px #dddddd;
+}
+div.book-poster a{
+	display: inline-block;
+	width:100%;
+	height:100%;
+}
+table.book-info{
+	display: block;
+	width:290px;
+	float: right;
+}
+table.book-info td.a{
+	border-bottom: 10px solid #ffffff;
+}
+table.book-info td{
+	vertical-align: top;
+}
+table.book-info i{
+	display: block;
+	width:24px;
+	height:24px;
+	border-radius: 50%;
+	background-color: #eee;
+	margin-right:8px;
+}
+table.book-info h3{
+	width:290px;
+	color:#333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-moz-transition:all 0.3s;
+	transition:all 0.3s;
+}
+table.book-info h3:hover{
+	letter-spacing: 2px;
+}
+table.book-info p.author{
+	line-height: 32px;
+	margin-bottom: 10px;
+}
+table.book-info p.author-info,
+table.book-info p.recommend{
+	color:#999;
+	max-height:60px;
+	overflow: hidden;
+}
+table.book-info span{
+	padding-right: 15px;
+}
+div.book-wrapper div.rank{
+	position: absolute;
+	bottom: 30px;
+	right:30px;
+}
+div.book-wrapper span.douban i{
+	display: inline-block;
+	font-style: normal;
+	font-size: 11px;
+	color:#ffffff;
+	width:16px;
+	height:16px;
+	border-radius: 50%;
+	background-color: #319541;
+	text-align: center;
+	line-height: 16px;
+	position: relative;
+	top:-1px;
+	margin-right: 3px;
+	margin-left: 15px;
+}
+span.rank-wrapper i{
+	display: inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(../img/star.png);
+}
+span.rank-wrapper{
+	position: relative;
+	top:2px;
+}
+
+/* 习课与组件 ---------------------------------------------------------------------------------------*/
+div[name="course"],div[name="widget"]{
+	padding:40px 80px;
+}
+div.basic-wrapper{
+	width:320px;
+	height:270px;
+	border:1px solid #dddddd;
+	border-radius:4px;
+	overflow: hidden;
+	float: left;
+	margin-bottom: 30px;
+}
+div.basic-wrapper:nth-child(3n-2){
+	margin-right:40px;
+}
+div.basic-wrapper:nth-child(3n-1){
+	margin-right:40px;
+}
+div.basic-poster{
+	width:100%;
+	height:190px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	-moz-transition:all 0.3s;
+	transition:all 0.3s;
+}
+div.basic-poster:hover{
+	box-shadow: 0 0 50px rgba(0,0,0,.6) inset;
+}
+div.basic-poster a{
+	display: inline-block;
+	width:100%;
+	height:100%;
+}
+div.mark-wrapper{
+	width:28px;
+	position: absolute;
+	top:12px;
+	right:12px;
+}
+div.inner-wrapper{
+	position: relative;
+	height:34px;
+}
+div.mark-wrapper div.mark{
+	width:24px;
+	height:24px;
+	border-radius: 14px;
+	background-color: #ffffff;
+	line-height: 28px;
+	overflow: hidden;
+	position: absolute;
+	top:0;
+	right: 0;
+	direction: rtl;
+}
+div.mark-wrapper div.mark i{
+	display: inline-block;
+	width:24px;
+	height: 24px;
+	border-radius: 50%;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+div.mark-wrapper div.mark span{
+	position: relative;
+	font-size: 13px;
+	top:-8px;
+}
+div.basic-wrapper h3{
+	color:#333;
+	line-height: 36px;
+	padding:0 12px;
+	cursor: pointer;
+	-moz-transition:all .3s;
+	transition:all .3s;
+}
+div.basic-wrapper h3:hover{
+	letter-spacing: 2px;
+}
+div.basic-info{
+	padding:0 12px;
+	height:40px;
+	position: relative;
+}
+div.publisher{
+	width:32px;
+	height:32px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin-right: 5px;
+}
+div.info-wrapper{
+	position: absolute;
+	top:6px;
+	right:15px;
+}
+div.basic-info span.publisher-name{
+	display: inline-block;
+	width:100px;
+	overflow: hidden;
+	position:relative;
+	top:-5px;
+}
+i.lessons-icon,i.likes-icon{
+	display: inline-block;
+	width:16px;
+	height:16px;
+	margin-left:15px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	top:3px;
+}
+i.lessons-icon{
+	background-image: url(../img/lesson.png);
+	top:2px;
+}
+i.likes-icon{
+	background-image: url(../img/like.png);
+}
+
+/* 集萃 ---------------------------------------------------------------------------------------------*/
+div.article-container{
+	width:1120px;
+	margin:0 auto;
+	position: relative;
+	margin-top: 20px;
+}
+div.article-wrapper{
+	position: absolute;
+	width:280px;
+	padding:15px 10px;
+}
+div.article-wrapper:nth-child(2){
+	top:0;
+	left: 280px;
+}
+div.article-wrapper:nth-child(3){
+	top:0;
+	left: 560px;
+}
+div.article-wrapper:nth-child(4){
+	top:0;
+	left: 840px;
+}
+div.article{
+	width:100%;
+	border:1px solid #dddddd;
+	padding:10px;
+	position: relative;
+}
+div.article time{
+	position: absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	top:-8px;
+	background-color: #fff;
+	display: inline-block;
+	width:120px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+}
+div.article h3{
+	margin:10px 0;
+}
+div.article a{
+	display: block;
+	width:100px;
+	margin:15px auto;
+	text-decoration: underline;
+}
+div.article a:hover{
+	color:#000;
+}
+div.article-poster{
+	width:240px;
+	height:150px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
