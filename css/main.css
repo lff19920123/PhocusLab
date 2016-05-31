@@ -144,6 +144,7 @@ div.book-poster{
 	background-repeat: no-repeat;
 	display: inline-block;
 	position: relative;
+	top: 0px;
 	-moz-transition:all .3s;
 	transition:all .3s;
 }
