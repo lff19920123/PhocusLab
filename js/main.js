@@ -27,6 +27,14 @@ $(document).ready(function(){
 			"height":"100px"});
 	});
 
+	// 鼠标移入搜索圈，伸展搜索条
+	$(".search-wrapper").mouseenter(function(){
+		$(this).animate({"width":"200px"},"fast").find("input").focus();
+	});
+	$(".search-wrapper").mouseleave(function(){
+		$(this).animate({"width":"28px"},"fast");
+	});
+
 	// 调用tab.js
 	var tab = new tabPages();
     tab.init({ 
@@ -49,7 +57,7 @@ $(document).ready(function(){
  	// 设置页脚的初始位置
  	(function(){
  		var h = $(".toggleContent").first().height();
- 		$("footer").css("top",h + 330 + "px");
+ 		$("footer").css("top",h + 270 + "px");
  	})();
  	
 

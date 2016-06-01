@@ -40,6 +40,53 @@ div.pro-container{
 	margin-top:50px;
 	position: relative;
 }
+div.logo{
+	width:140px;
+	height:28px;
+	position: absolute;
+	top:30px; left:30px;
+	background-image: url(../img/logo.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+div.search-wrapper{
+	width:28px;
+	height:28px;
+	border-radius: 14px;
+	position: absolute;
+	top:30px;
+	right:50px;
+	overflow: hidden;
+}
+div.search-wrapper div.search{
+	width:200px;
+	height:28px;
+	border-radius: 14px;
+	background-image: linear-gradient(#e1e1e1,#fff);
+	position: absolute;
+	top:0; right:0;	
+}
+div.search-wrapper div.search input{
+	border:none;
+	outline: none;
+	width:160px;
+	height:24px;
+	margin-left: 10px;
+	margin-top: 2px;
+	background-color: transparent;
+}
+div.search-wrapper div.search i{
+	display: inline-block;
+	width:16px;
+	height:16px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url(../img/search.png);
+	position: absolute;
+	top:6px; right:6px;
+	cursor: pointer;
+}
 div.pro-container div.pro-wrapper{
 	width:100px;
 	height:180px;
@@ -392,6 +439,9 @@ div.article{
 	padding:10px;
 	position: relative;
 }
+div.article:hover{
+	border-color:#FF6B5B;
+}
 div.article time{
 	position: absolute;
 	left:0;
@@ -410,12 +460,13 @@ div.article h3{
 }
 div.article a{
 	display: block;
-	width:100px;
+	width:78px;
 	margin:15px auto;
 	text-decoration: underline;
+	transition:all .3s;
 }
 div.article a:hover{
-	color:#000;
+	color:#FF6B5B;
 }
 div.article-poster{
 	width:240px;
